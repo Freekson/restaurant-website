@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="build/css/style.css" />
+    <title>Restaurant</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="header__nav">
+          <img src="./src/img/logo.png  " alt="logo" />
+          <div class="header__menu">
+            <ul>
+              <li><a href="#">Main</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Order</a></li>
+              <li class="cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__order">
+            <div class="phone">
+              <i class="fa-solid fa-phone-volume"></i>
+              <p>+997-345-43-65</p>
+            </div>
+            <a href="#" class="ui-btn">TABLE ORDERING</a>
+          </div>
+          <div class="menu__btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+      <div class="header__title">
+        <span class="contrast-text">Welcome to</span>
+        <span class="contrast-text b">Our restaurant</span>
+        <span class="white-text">HOUSE OF BEST FOOD</span>
+        <a href="#" class="ui-btn">VIEW MENU</a>
+      </div>
+    </header>
+    <section class="section">
+      <div class="section__wrapper">
+        <div class="food-cards">
+          <div class="food-cards__item">
+            <img src="./src/img/card.png" alt="not found" />
+            <p class="food-cards__title">Magical <span>Atmosphere</span></p>
+            <p class="food-cards__text">
+              Our place has a magical atmosphere filled with delicious aromas
+            </p>
+          </div>
+          <div class="food-cards__item">
+            <img src="./src/img/card.png" alt="not found" />
+            <p class="food-cards__title">The Best Quality <span>Food</span></p>
+            <p class="food-cards__text">
+              The quality of our The quality of our food is superb!
+            </p>
+          </div>
+          <div class="food-cards__item">
+            <img src="./src/img/card.png" alt="not found" />
+            <p class="food-cards__title">Inexpensive <span>Food</span></p>
+            <p class="food-cards__text">
+              The cost of our Food depends only on its quantity. Quality always
+              on top!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div id="recipe-container"></div> -->
+    <script src="build/js/script.js"></script>
+  </body>
+</html>
