@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="build/css/style.css" />
+    <title>Recipe</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="color-bg">
+        <div class="header__wrapper">
+          <nav class="header__nav">
+            <a href="index.html" class="logo">
+              <img src="./build/img/logo.png  " alt="logo"
+            /></a>
+            <div class="header__menu">
+              <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="recipes.html">Our recipes</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="ordering.html">Order</a></li>
+                <li class="cart">
+                  <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__order">
+              <div class="phone">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>+997-345-43-65</p>
+              </div>
+              <a href="ordering.html" class="ui-btn">TABLE ORDERING</a>
+            </div>
+            <div class="menu__btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="section ordering-section">
+      <div class="section__wrapper">
+        <div class="section__header">Table <span>Ordering</span></div>
+        <form id="order-form">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="input" required />
+            <p id="name-error" class="error-message"></p>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="input" required />
+            <p id="email-error" class="error-message"></p>
+          </div>
+          <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" class="input" required />
+            <p id="phone-error" class="error-message"></p>
+          </div>
+          <div>
+            <label for="table-size">Table Size:</label>
+            <select id="table-size" required>
+              <option value="">Select table size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <p id="table-size-error" class="error-message"></p>
+          </div>
+          <div>
+            <label for="special-requests">Additional Requests:</label>
+            <textarea id="special-requests"></textarea>
+          </div>
+          <div class="checkbox">
+            <p>Select preferred payment method:</p>
+            <input
+              type="radio"
+              id="payment-cash"
+              name="payment"
+              value="cash"
+              required
+            />
+            <label for="payment-cash">Cash</label>
+            <input
+              type="radio"
+              id="payment-card"
+              name="payment"
+              value="card"
+              required
+            />
+            <label for="payment-card">Card</label>
+            <p id="payment-error" class="error-message"></p>
+          </div>
+          <div class="checkbox">
+            <p>Select additional options:</p>
+            <input
+              type="checkbox"
+              id="option-delivery"
+              name="options"
+              value="delivery"
+            />
+            <label for="option-delivery">Delivery</label>
+            <input
+              type="checkbox"
+              id="option-takeaway"
+              name="options"
+              value="takeaway"
+            />
+            <label for="option-takeaway">Takeaway</label>
+            <p id="options-error" class="error-message"></p>
+          </div>
+          <div>
+            <button type="submit" class="ui-btn">Place Order</button>
+          </div>
+        </form>
+
+        <div class="btns">
+          <button id="show-all-orders-btn" class="ui-btn">
+            Show all orders
+          </button>
+          <button id="edit-data-btn" style="display: none">Edit order</button>
+          <button id="delete-data-btn" class="ui-btn" style="display: none">
+            Delete order
+          </button>
+        </div>
+
+        <div id="order-list"></div>
+      </div>
+    </section>
+    <script src="./src/scripts/header.js"></script>
+    <script src="./src/scripts/form.js"></script>
+  </body>
+</html>

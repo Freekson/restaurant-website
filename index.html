@@ -26,64 +26,173 @@
 
   <body>
     <header class="header">
-      <div class="header__wrapper">
-        <nav class="header__nav">
-          <img src="./src/img/logo.png  " alt="logo" />
-          <div class="header__menu">
-            <ul>
-              <li><a href="#">Main</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Order</a></li>
-              <li class="cart">
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="header__order">
-            <div class="phone">
-              <i class="fa-solid fa-phone-volume"></i>
-              <p>+997-345-43-65</p>
+      <div class="image-bg">
+        <div class="header__wrapper">
+          <nav class="header__nav">
+            <a href="index.html" class="logo">
+              <img src="./build/img/logo.png  " alt="logo"
+            /></a>
+            <div class="header__menu">
+              <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="recipes.html">Our recipes</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="ordering.html">Order</a></li>
+                <li class="cart">
+                  <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+              </ul>
             </div>
-            <a href="#" class="ui-btn">TABLE ORDERING</a>
-          </div>
-          <div class="menu__btn">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
-      </div>
-      <div class="header__title">
-        <span class="contrast-text">Welcome to</span>
-        <span class="contrast-text b">Our restaurant</span>
-        <span class="white-text">HOUSE OF BEST FOOD</span>
-        <a href="#" class="ui-btn">VIEW MENU</a>
+            <div class="header__order">
+              <div class="phone">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>+997-345-43-65</p>
+              </div>
+              <a href="ordering.html" class="ui-btn">TABLE ORDERING</a>
+            </div>
+            <div class="menu__btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+        </div>
+        <div class="header__title">
+          <span class="contrast-text">Welcome to</span>
+          <span class="contrast-text b">Our restaurant</span>
+          <span class="white-text">HOUSE OF BEST FOOD</span>
+          <a href="#" class="ui-btn">VIEW MENU</a>
+        </div>
       </div>
     </header>
     <section class="section">
       <div class="section__wrapper">
         <div class="food-cards">
           <div class="food-cards__item">
-            <img src="./src/img/card.png" alt="not found" />
+            <img src="./build/img/card.png" alt="not found" />
             <p class="food-cards__title">Magical <span>Atmosphere</span></p>
             <p class="food-cards__text">
               Our place has a magical atmosphere filled with delicious aromas
             </p>
           </div>
           <div class="food-cards__item">
-            <img src="./src/img/card.png" alt="not found" />
+            <img src="./build/img/card.png" alt="not found" />
             <p class="food-cards__title">The Best Quality <span>Food</span></p>
             <p class="food-cards__text">
               The quality of our The quality of our food is superb!
             </p>
           </div>
           <div class="food-cards__item">
-            <img src="./src/img/card.png" alt="not found" />
+            <img src="./build/img/card.png" alt="not found" />
             <p class="food-cards__title">Inexpensive <span>Food</span></p>
             <p class="food-cards__text">
               The cost of our Food depends only on its quantity. Quality always
               on top!
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__wrapper">
+        <div class="our-history">
+          <div class="our-history__title">
+            <div class="section__header">Our <span>History</span></div>
+            <p class="our-history__text">
+              Like any other distinctive place, we have our own, special
+              history. The idea for the restaurant came to the founders
+              unexpectedly. On a a walk in the woods, the creator of our
+              restaurant was stranded hundreds kilometers from the nearest
+              settlement. Away from civilization and communications, they had to
+              set up a rudimentary household for a while, to find and prepare
+              their own food.
+            </p>
+            <div class="statistic">
+              <div class="statistic__item">
+                <p class="statistic__count">93</p>
+                <p class="statistic__title">Drinks</p>
+              </div>
+              <div class="statistic__item">
+                <p class="statistic__count">206</p>
+                <p class="statistic__title">Food</p>
+              </div>
+              <div class="statistic__item">
+                <p class="statistic__count">71</p>
+                <p class="statistic__title">Snacks</p>
+              </div>
+            </div>
+          </div>
+          <div class="our-history__img">
+            <img src="./build/img/images.png" alt="not found" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section banner-section">
+      <div class="section__wrapper">
+        <div class="banner">
+          <div class="banner__title">
+            <p class="banner__header">
+              Celebrate at one of of the finest restaurants.
+            </p>
+            <p class="banner__text">
+              This month only, business lunch from 10 $
+            </p>
+          </div>
+          <a href="ordering.html" class="ui-btn">Table ordering</a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="menu">
+      <div class="section__wrapper">
+        <div class="section__header">Our <span>menu</span></div>
+        <div class="menu">
+          <div class="menu__image">
+            <img src="./build/img/pizza.jpg" alt="not found" />
+          </div>
+          <div class="menu__list">
+            <a href="#" class="menu__item">
+              <img src="./build/img/burger.jpg" alt="not found" />
+              <div class="menu__text">
+                <p>Gamburger mini</p>
+                <p>7$</p>
+              </div>
+            </a>
+            <a href="#" class="menu__item">
+              <img src="./build/img/burger.jpg" alt="not found" />
+              <div class="menu__text">
+                <p>Gamburger mini</p>
+                <p>7$</p>
+              </div>
+            </a>
+            <a href="#" class="menu__item">
+              <img src="./build/img/burger.jpg" alt="not found" />
+              <div class="menu__text">
+                <p>Gamburger mini</p>
+                <p>7$</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section recipes-section" id="recipes">
+      <div class="section__wrapper">
+        <div class="section__header">Our <span>recipes</span></div>
+        <div class="recipes">
+          <div class="recipes__item">
+            <img src="./build/img/burger.jpg" alt="not found" />
+            <p class="name"></p>
+            <a href="ui-btn">Show recipes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="about-us">
+      <div class="section__wrapper">
+        <div class="section__header">About <span>us</span></div>
+        <div class="about-us">
+          <img src="./build/img/1c.jpg" alt="not found" />
+          <img src="./build/img/2c.jpg" alt="not found" />
+          <img src="./build/img/3c.jpg" alt="not found" />
         </div>
       </div>
     </section>
