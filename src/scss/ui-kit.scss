@@ -1,0 +1,67 @@
+$ui-contrast-color: #ff7400;
+$ui-light-contrast-color: #e5e5e5;
+$ui-black-color: #2c2c2c;
+$ui-white-color: #fff;
+$ui-light-color: #656363;
+$ui-bg-light: #e5e5e5;
+
+$ui-border: 0.2rem solid $ui-black-color;
+$ui-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+$ui-border-radius-b: 5rem;
+$ui-border-radius: 0.5rem;
+
+$ui-index-0: 0;
+$ui-index-1: 1;
+$ui-index-2: 2;
+$ui-index-3: 3;
+
+$ui-mouse-device: "(any-hover: hover) and (any-pointer: fine)";
+$ui-touch-device: "(any-hover: none) and (any-pointer: coarse)";
+
+$ui-m-desk-lap: "(max-width: 1200px)";
+$ui-m-tabl: "(max-width: 1199px)";
+$ui-m-port-tabl: "(max-width: 991px)";
+$ui-m-phone: "(max-width: 767px)";
+$ui-m-sm-phone: "(max-width: 480px)";
+$ui-m-usm-phone: "(max-width: 290px)";
+
+.ui-btn {
+  display: inline-block;
+  padding: 1rem 1.3rem;
+  cursor: pointer;
+  background: $ui-contrast-color;
+  color: $ui-white-color;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: $ui-index-1;
+  position: relative;
+  border-radius: $ui-border-radius;
+  box-sizing: border-box;
+  border: $ui-border;
+  text-align: center;
+  vertical-align: middle;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $ui-light-contrast-color;
+    z-index: -1;
+    transition: 0.2s linear;
+    clip-path: circle(0% at 0% 5%);
+  }
+
+  &:hover::before {
+    @media #{$ui-mouse-device} {
+      clip-path: circle(100%);
+    }
+  }
+  &:hover {
+    @media #{$ui-mouse-device} {
+      color: $ui-black-color;
+      border: $ui-border;
+    }
+  }
+}

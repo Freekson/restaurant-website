@@ -1,0 +1,487 @@
+// import font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+
+// ui kit
+@import "./ui-kit";
+
+//components
+@import "./_header";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $ui-contrast-color;
+    border-radius: $ui-border-radius-b;
+  }
+}
+
+.section {
+  &__wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-size: 5rem;
+    text-align: center;
+    span {
+      color: $ui-contrast-color;
+    }
+  }
+}
+
+.food-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15rem;
+  z-index: $ui-index-2;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 4rem 2rem;
+    box-shadow: $ui-shadow;
+    background: $ui-white-color;
+
+    img {
+      margin-bottom: 2rem;
+      width: 30%;
+    }
+  }
+
+  &__title {
+    color: $ui-black-color;
+    font-size: 2rem;
+    text-align: center;
+
+    span {
+      color: $ui-contrast-color;
+    }
+  }
+
+  &__text {
+    color: $ui-light-color;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+.our-history {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+
+  &__title {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .statistic {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5rem;
+
+      &__count {
+        color: $ui-contrast-color;
+        font-size: 5rem;
+      }
+
+      &__title {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__text {
+    width: 80%;
+    font-size: 1.7rem;
+    color: $ui-light-color;
+    margin-top: 5rem;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: end;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.banner-section {
+  background-image: url("../../src/img/black-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 8rem 0;
+  margin: 10rem 0;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    text-align: center;
+    width: 50%;
+  }
+
+  &__header {
+    color: $ui-contrast-color;
+    font-size: 4rem;
+  }
+
+  &__text {
+    color: $ui-white-color;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+
+  &__image {
+    img {
+      width: 95%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  &__text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: $ui-black-color;
+  }
+}
+
+.recipes-section {
+  background-image: url("../../src/img/menu-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 8rem 0;
+  margin: 10rem 0;
+  height: 100vh;
+
+  .section__header {
+    color: $ui-white-color;
+
+    span {
+      color: $ui-white-color;
+    }
+  }
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
+
+  &__item {
+    background-color: $ui-white-color;
+    padding: 1rem 2rem;
+    box-shadow: $ui-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: $ui-border-radius;
+
+    img {
+      width: 90%;
+      border-radius: $ui-border-radius-b;
+      margin-top: 2rem;
+    }
+
+    .name {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 2rem;
+      padding: 0;
+    }
+
+    .ui-btn {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+      border: none;
+    }
+  }
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+
+  img {
+    box-shadow: $ui-shadow;
+    width: 30%;
+  }
+}
+
+.ordering-section {
+  margin-top: 10rem;
+
+  .section__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#order-form {
+  width: 70%;
+  margin-top: 5rem;
+  label {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  div {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .input {
+    height: 20px;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    height: 100px;
+    resize: vertical;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  select {
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .checkbox {
+    display: block;
+    margin: 2rem 0;
+    label {
+      margin-right: 2rem;
+    }
+  }
+}
+
+#order-list > div > h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+#order-list > div > p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+#order-list > div {
+  margin: 2rem 0;
+}
+
+.btns {
+  margin-bottom: 5rem;
+}
+
+#recipe-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .recipe-card {
+    width: 30%;
+    img {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    margin-top: 5rem;
+  }
+
+  img {
+    margin: 2rem 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+#recipe-container > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem 0;
+
+  img {
+    margin-top: 1rem;
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+}
+@media #{$ui-m-port-tabl} {
+  .our-history__img > img {
+    width: 80%;
+  }
+
+  body > section:nth-child(7) > div > div.menu > div.menu__image {
+    display: none;
+  }
+
+  .menu__list {
+    width: 100%;
+  }
+  .menu__text {
+    flex-wrap: wrap;
+  }
+
+  #recipe-container {
+    .recipe-card {
+      width: 45%;
+    }
+  }
+}
+
+@media #{$ui-m-phone} {
+  .food-cards {
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      width: 60%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .our-history {
+    flex-direction: column;
+
+    &__title {
+      width: 100%;
+    }
+
+    &__img {
+      margin-top: 7rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .banner {
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 5rem;
+      width: 100%;
+    }
+  }
+
+  .recipes-section {
+    overflow: visible;
+    height: auto;
+  }
+  .recipes {
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      width: 75%;
+      margin: 1rem 0;
+    }
+  }
+
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 75%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  #recipe-container {
+    justify-content: center;
+    .recipe-card {
+      width: 75%;
+    }
+  }
+}
+
+@media #{$ui-m-sm-phone} {
+  .menu__item {
+    img {
+      width: 30%;
+    }
+  }
+}

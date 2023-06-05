@@ -1,0 +1,208 @@
+.header {
+  .image-bg {
+    height: 100vh;
+    background-image: url("../../src/img/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .color-bg {
+    background-color: $ui-light-color;
+  }
+
+  &__wrapper {
+    width: 75%;
+    padding: 2rem 12.5% 2rem 12.5%;
+  }
+
+  &__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: end;
+
+      li {
+        a {
+          color: $ui-white-color;
+          text-transform: uppercase;
+          font-size: 2rem;
+          margin: 0 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          white-space: nowrap;
+
+          &:hover {
+            color: $ui-contrast-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+
+    .phone {
+      display: flex;
+      color: $ui-white-color;
+      margin-right: 2rem;
+      font-size: 1.5rem;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 0 12.5%;
+    margin-top: 7%;
+
+    .white-text {
+      color: $ui-white-color;
+      position: relative;
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .contrast-text {
+      color: $ui-contrast-color;
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    .contrast-text.b {
+      font-size: 4rem;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    .ui-btn {
+      width: 50%;
+    }
+  }
+
+  .menu__btn {
+    display: none;
+
+    i {
+      color: $ui-contrast-color;
+      font-size: 3rem;
+    }
+  }
+
+  img {
+    width: 10%;
+  }
+}
+
+@media #{$ui-m-desk-lap} {
+  html {
+    font-size: 55%;
+  }
+
+  body > header > div > div.header__wrapper > nav > div.header__order > div {
+    display: none;
+  }
+}
+
+@media #{$ui-m-port-tabl} {
+  .header {
+    &__title {
+      margin: 0 35%;
+      margin-top: 15%;
+      width: 45%;
+    }
+
+    &__nav {
+      .logo {
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$ui-m-phone} {
+  .header {
+    &__wrapper {
+      background: $ui-black-color;
+      position: fixed;
+      z-index: $ui-index-3;
+      top: 0;
+    }
+
+    &__order {
+      display: none;
+    }
+
+    &__menu {
+      ul {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        background-color: $ui-black-color;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        z-index: $ui-index-3;
+        box-shadow: $ui-shadow;
+
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        li {
+          margin: 2rem 0;
+        }
+
+        .cart {
+          display: none;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      width: 100%;
+      margin-top: 25%;
+    }
+
+    .menu__btn {
+      display: block;
+    }
+  }
+}
+
+@media #{$ui-m-sm-phone} {
+  .header {
+    &__title {
+      margin-top: 50%;
+    }
+  }
+}

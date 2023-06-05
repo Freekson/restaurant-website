@@ -63,17 +63,41 @@
         <form id="order-form">
           <div>
             <label for="name">Name:</label>
-            <input type="text" id="name" class="input" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input"
+              minlength="3"
+              minlength="2"
+              maxlength="32"
+              pattern="^[a-zA-Z]+$"
+              required
+            />
             <p id="name-error" class="error-message"></p>
           </div>
           <div>
             <label for="email">Email:</label>
-            <input type="email" id="email" class="input" required />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input"
+              required
+            />
             <p id="email-error" class="error-message"></p>
           </div>
           <div>
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" class="input" required />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              minlength="9"
+              maxlength="9"
+              class="input"
+              required
+            />
             <p id="phone-error" class="error-message"></p>
           </div>
           <div>
